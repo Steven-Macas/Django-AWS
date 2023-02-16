@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo  %} Face App {% endblock %}
+
+{% block contenido  %}
+
+<h1>Face</h1>
+<ul>
+    <li><a href="#">Enlace 1</a></li>
+    <li><a href="#">Enlace 2</a></li>
+    <li><a href="#">Enlace 3</a></li>
+    <li><a href="{% url 'en_face:detalle' 4 %}">Enlace 4</a></li>
+    <li><a href="detalle/1">Enlace 5</a></li>
+    <li><a href="{% url 'en_face:upload' %}">Subir imagen</a></li>
+</ul>
+{% endblock %}

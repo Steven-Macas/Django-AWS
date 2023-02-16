@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo  %} Face App {% endblock %}
+
+{% block estilo_script %}
+<link rel="stylesheet" href="https://unpkg.com/jcrop/dist/jcrop.css">
+<script src="https://unpkg.com/jcrop"></script>
+{% endblock %}
+
+{% block contenido  %}
+    <h1>Nombre de la imagen: {{ data.title }}</h1>
+    <h3>Id de la imagen: {{ data.id }}</h3>
+    <h3>Ruta de la imagen: {{ data.image.url }}</h3>
+    <img src="{{ data.image.url }}" alt="Imagen" width="300">
+    <form>
+        <input type="text" name="coordenadas"  id="">
+        <input type="text" name=""  id="">
+        <input type="text" name=""  id="">
+    </form>
+{% endblock %}
+
+{% block post_scripts %}
+<script>
+    Jcrop.attach('target',{
+        shadeColor: 'red',
+        multi: true
+});
+function getCoordenadas(){
+    let crops = jcrop.crops;
+    let coords = [];
+    for (const crop of crops){
+        console.log(crops.pos.x,crop.pos.y)
+    }
+}
+</script>
+{% endblock %}

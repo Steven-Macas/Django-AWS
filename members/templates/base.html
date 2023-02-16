@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title> {% block titulo  %}  {% endblock %} </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'faceApp/assets/css/style.css'%}">
+    <link rel="icon" href="{% static 'faceApp/assets/img/logo.png'%}">
+    {% block estilo_script %}  {% endblock %}
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="nav navbar-nav">
+          <a class="nav-item nav-link active" href="#">Inicio</a>
+          <a class="nav-item nav-link active" href="#">FaceApp</a>
+          <a class="nav-item nav-link active" href="#">PIA</a>
+      </div>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+          {% block contenido  %}  {% endblock %}
+        </div>
+    </div>
+  </div>
+  <img src="{% static 'faceApp/assets/img/imagen.jpg'%}" alt="Caras" width="150" height="150">
+  <script src="{% static 'faceApp/assets/js/script.js'%}"></script>
+  {% block post_scripts %}  {% endblock %}
+</body>
+
+</html>
