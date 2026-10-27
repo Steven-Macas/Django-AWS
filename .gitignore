@@ -1,0 +1,6 @@
+# Credenciales locales: nunca se suben al repositorio
+.env
+
+# Python / Django
+__pycache__/
+*.pyc

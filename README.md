@@ -33,9 +33,9 @@ python manage.py migrate
 python manage.py runserver      # http://127.0.0.1:8000
 ```
 
-For the AWS notebook, load your credentials from environment variables or a `.env` file
-(`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`, `AWS_DEFAULT_REGION`)
-instead of writing them in the code.
+For the AWS notebook, copy `.env.example` to `.env` and fill in your credentials
+(`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`, `AWS_DEFAULT_REGION`).
+The notebook reads them with `python-dotenv`, and `.env` is excluded from the repository.
 
 ---
 
